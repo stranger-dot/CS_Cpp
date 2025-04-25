@@ -16,7 +16,7 @@ namespace Animal {
 
 		Dog::Dog(string name, int age) : Mammal(name, age) {
 				this->name = name;
-				this-> age = age;
+				this->age = age;
 		}
 
 		void Dog::speak() const {
@@ -25,5 +25,22 @@ namespace Animal {
 
 		Dog::~Dog() {
 				cout << "Destroyed the dog : " << name << "(" << age << ")\n";
+		}
+
+		Cat::Cat(string name, int age) : Mammal(name, age) {
+				Cat::name = name;
+				Cat::age = age;
+		}
+
+		void Cat::speak() const {
+				cout << name << "(" << age << ")" << " : catcat!\n";
+		}
+
+		void Cat::jump(int height) const {
+				cout << "high : " << height << "\n";
+		}
+
+		Cat::~Cat() {
+				cout << "Destroyed the cat : " << name << "(" << age << ")\n";
 		}
 }
